@@ -1,0 +1,1502 @@
+# Copyright (C) 2026 Zeko Team
+# This file is distributed under the GNU General Public License v2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: zeko 1.0.0\n"
+"Report-Msgid-Bugs-To: https://zeko.io\n"
+"POT-Creation-Date: 2026-09-25 08:13+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Zeko Team\n"
+"X-Domain: zeko\n"
+"X-Generator: zeko make-pot\n"
+
+#. translators: %d: number of days
+#: inc/dashboard.php:1038
+#, php-format
+msgid "%1$d day(s) ago"
+msgstr ""
+
+#. translators: %d: number of hours
+#: inc/dashboard.php:1034
+#, php-format
+msgid "%1$d hour(s) ago"
+msgstr ""
+
+#. translators: %d: number of minutes
+#: inc/dashboard.php:1029
+#, php-format
+msgid "%1$d minute(s) ago"
+msgstr ""
+
+#. translators: 1: sender display name. 2: message preview
+#: inc/messaging.php:486
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#. translators: %s: Comment count number.
+#: comments.php:31
+#, php-format
+msgid "%s Comment"
+msgid_plural "%s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number of days
+#: inc/messaging.php:525
+#, php-format
+msgid "%s day ago"
+msgid_plural "%s days ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number of hours
+#: inc/messaging.php:522
+#, php-format
+msgid "%s hour ago"
+msgid_plural "%s hours ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number of minutes
+#: inc/messaging.php:518
+#, php-format
+msgid "%s min ago"
+msgid_plural "%s mins ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:61
+msgid ", "
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:68
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: inc/friendships.php:906
+msgid "Accept"
+msgstr ""
+
+#: inc/friendships.php:192
+msgid "Accept Request"
+msgstr ""
+
+#: header.php:34
+msgid "Account"
+msgstr ""
+
+#: functions.php:46 functions.php:409 functions.php:560
+msgid "Account Menu"
+msgstr ""
+
+#: inc/auth.php:757 inc/auth.php:789
+msgid "Actions"
+msgstr ""
+
+#: inc/auth.php:632 inc/auth.php:751 inc/auth.php:955
+msgid "Activity"
+msgstr ""
+
+#: functions.php:472 inc/activity-feed.php:139 inc/activity-feed.php:189
+msgid "Activity Feed"
+msgstr ""
+
+#: inc/messaging.php:1404
+msgid "Activity logged successfully!"
+msgstr ""
+
+#: inc/friendships.php:184
+msgid "Add Friend"
+msgstr ""
+
+#: functions.php:125
+msgid "Add footer widgets here."
+msgstr ""
+
+#: functions.php:113
+msgid "Add widgets here."
+msgstr ""
+
+#: inc/class-zeko-multi-checkbox-control.php:189
+msgid "Admin Restriction"
+msgstr ""
+
+#: inc/activity-feed.php:193
+msgid "All Activities"
+msgstr ""
+
+#: inc/activity-feed.php:206
+msgid "All Time"
+msgstr ""
+
+#: inc/auth.php:1027
+msgid "All essential pages have been recreated."
+msgstr ""
+
+#: footer.php:28
+msgid "All rights reserved."
+msgstr ""
+
+#: inc/class-zeko-multi-checkbox-control.php:209
+msgid "Allowed Admin Roles"
+msgstr ""
+
+#: inc/auth.php:378
+msgid "Already have an account?"
+msgstr ""
+
+#: inc/friendships.php:943
+msgid "An unknown error occurred."
+msgstr ""
+
+#: inc/activity-feed.php:195
+msgid "Answers Given"
+msgstr ""
+
+#: inc/auth.php:847
+msgid ""
+"Are you sure you want to recreate all pages? This will update existing pages."
+msgstr ""
+
+#: inc/friendships.php:93
+msgid "Are you sure you want to remove this friend?"
+msgstr ""
+
+#: inc/dashboard.php:137
+msgid "Are you sure you want to reset your dashboard layout?"
+msgstr ""
+
+#: functions.php:484
+msgid "Ask a Question"
+msgstr ""
+
+#: inc/dashboard.php:1059
+msgid "Ask and answer questions"
+msgstr ""
+
+#: inc/messaging.php:335
+msgid "Attach file"
+msgstr ""
+
+#: inc/activity-feed.php:198
+msgid "Avatar Changes"
+msgstr ""
+
+#: inc/dashboard.php:779
+msgid "Avg Mutual"
+msgstr ""
+
+#: functions.php:179
+msgid "Back to Top"
+msgstr ""
+
+#: inc/messaging.php:312
+msgid "Back to conversations"
+msgstr ""
+
+#: inc/friendships.php:203
+msgid "Blocked"
+msgstr ""
+
+#: functions.php:422
+msgid "Browse Courses"
+msgstr ""
+
+#: functions.php:449 inc/dashboard.php:1636
+msgid "Browse Jobs"
+msgstr ""
+
+#: functions.php:905
+msgid "Businesses"
+msgstr ""
+
+#: inc/customizer.php:112
+msgid "Button Style"
+msgstr ""
+
+#: inc/dashboard.php:1083
+msgid "Buy and sell products"
+msgstr ""
+
+#: inc/messaging.php:364
+msgid "Cancel"
+msgstr ""
+
+#: functions.php:430
+msgid "Certificates"
+msgstr ""
+
+#: inc/auth.php:794
+msgid "Check Page Status"
+msgstr ""
+
+#: inc/auth.php:888
+msgid "Checking pages..."
+msgstr ""
+
+#: inc/messaging.php:307
+msgid "Choose a conversation from the left to view messages."
+msgstr ""
+
+#: inc/activity-feed.php:218
+msgid "Clear Filters"
+msgstr ""
+
+#: inc/messaging.php:350
+msgid "Close new message dialog"
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "Color Scheme"
+msgstr ""
+
+#: comments.php:57
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:467
+msgid "Community"
+msgstr ""
+
+#: inc/dashboard.php:529
+msgid "Complete Your Profile"
+msgstr ""
+
+#: inc/auth.php:363
+msgid "Confirm Password"
+msgstr ""
+
+#: functions.php:378 functions.php:528
+msgid "Contact"
+msgstr ""
+
+#: inc/customizer.php:89
+msgid "Container Width (px)"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:40
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/messaging.php:1321
+msgid "Conversation not found."
+msgstr ""
+
+#: inc/messaging.php:317
+msgid "Conversation settings"
+msgstr ""
+
+#: functions.php:503
+msgid "Courses"
+msgstr ""
+
+#: inc/activity-feed.php:199
+msgid "Cover Photo Changes"
+msgstr ""
+
+#: inc/auth.php:779
+msgid "Create"
+msgstr ""
+
+#: inc/auth.php:770
+msgid "Created"
+msgstr ""
+
+#. translators: %s: page title
+#: inc/auth.php:1006
+#, php-format
+msgid "Created new %s page."
+msgstr ""
+
+#: inc/auth.php:861
+msgid "Creating all pages..."
+msgstr ""
+
+#: inc/auth.php:830
+msgid "Creating page..."
+msgstr ""
+
+#: inc/dashboard.php:194
+msgid "Customize Dashboard"
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "Dark"
+msgstr ""
+
+#: functions.php:389 functions.php:540 inc/auth.php:607 inc/auth.php:747
+#: inc/auth.php:935 inc/dashboard.php:1241 inc/dashboard.php:1244
+msgid "Dashboard"
+msgstr ""
+
+#: inc/dashboard.php:1535
+msgid "Dashboard layout reset to default!"
+msgstr ""
+
+#: inc/dashboard.php:1313
+msgid "Dashboard layout saved!"
+msgstr ""
+
+#: inc/dashboard.php:135
+msgid "Dashboard saved!"
+msgstr ""
+
+#: footer.php:30 inc/customizer.php:128
+msgid ""
+"Developed by <a href=\"https://ozconsultz.com\" target=\"_blank\" rel="
+"\"noopener noreferrer\">Ozconsultz.com</a>"
+msgstr ""
+
+#: inc/auth.php:233
+msgid "Don't have an account?"
+msgstr ""
+
+#: inc/auth.php:773 inc/dashboard.php:250 inc/dashboard.php:506
+#: inc/dashboard.php:1389
+msgid "Edit"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:98
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/auth.php:622 inc/dashboard.php:548
+msgid "Edit Profile"
+msgstr ""
+
+#: inc/template-functions.php:98
+msgid "Email"
+msgstr ""
+
+#: inc/auth.php:350
+msgid "Email Address"
+msgstr ""
+
+#: inc/auth.php:414
+msgid "Email address already exists. Please choose another one."
+msgstr ""
+
+#: inc/template-functions.php:154
+msgid "Enter"
+msgstr ""
+
+#: functions.php:180
+msgid "Enter your comment here..."
+msgstr ""
+
+#: inc/activity-feed.php:89
+msgid "Error loading activities."
+msgstr ""
+
+#: inc/dashboard.php:136 inc/friendships.php:92 inc/messaging.php:220
+msgid "Error: "
+msgstr ""
+
+#: inc/friendships.php:344
+msgid "Failed to accept friend request."
+msgstr ""
+
+#: inc/dashboard.php:1408
+msgid "Failed to add widget."
+msgstr ""
+
+#: inc/messaging.php:178
+msgid "Failed to fix messages page. Please check if the page exists."
+msgstr ""
+
+#: inc/friendships.php:377
+msgid "Failed to reject friend request."
+msgstr ""
+
+#: inc/friendships.php:414
+msgid "Failed to remove friend."
+msgstr ""
+
+#: inc/dashboard.php:1505
+msgid "Failed to remove widget."
+msgstr ""
+
+#: inc/friendships.php:306
+msgid "Failed to send friend request."
+msgstr ""
+
+#: inc/messaging.php:1009 inc/messaging.php:1199
+msgid "Failed to send message."
+msgstr ""
+
+#: inc/dashboard.php:677 inc/dashboard.php:822
+msgid "Find Friends"
+msgstr ""
+
+#: inc/dashboard.php:1053
+msgid "Find and post jobs"
+msgstr ""
+
+#: inc/dashboard.php:1071
+msgid "Find mentors and mentees"
+msgstr ""
+
+#: inc/customizer.php:136
+msgid "Footer Credit"
+msgstr ""
+
+#: functions.php:45 functions.php:384 functions.php:535
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:123
+msgid "Footer Widgets"
+msgstr ""
+
+#: inc/auth.php:810
+msgid ""
+"For other pages, you can create them manually and add the appropriate "
+"content."
+msgstr ""
+
+#: functions.php:457 inc/dashboard.php:1074
+msgid "Freelance"
+msgstr ""
+
+#: inc/dashboard.php:1077
+msgid "Freelance projects"
+msgstr ""
+
+#: inc/friendships.php:887
+msgid "Friend Requests"
+msgstr ""
+
+#: inc/friendships.php:91 inc/friendships.php:973
+msgid "Friend removed."
+msgstr ""
+
+#: inc/friendships.php:89 inc/friendships.php:957
+msgid "Friend request accepted!"
+msgstr ""
+
+#: inc/friendships.php:90 inc/friendships.php:965
+msgid "Friend request rejected!"
+msgstr ""
+
+#: inc/friendships.php:949
+msgid "Friend request sent!"
+msgstr ""
+
+#: functions.php:476 inc/auth.php:642 inc/auth.php:753 inc/auth.php:965
+#: inc/dashboard.php:313 inc/dashboard.php:556 inc/dashboard.php:611
+#: inc/dashboard.php:764 inc/dashboard.php:1427
+msgid "Friends"
+msgstr ""
+
+#: inc/dashboard.php:634
+msgid "Friendship module not available."
+msgstr ""
+
+#: inc/friendships.php:287
+msgid "Friendship request already exists or users are already friends/blocked."
+msgstr ""
+
+#: inc/customizer.php:48
+msgid "General Settings"
+msgstr ""
+
+#: inc/dashboard.php:528
+msgid ""
+"Get started by completing your profile, exploring the modules, and "
+"connecting with other members."
+msgstr ""
+
+#: inc/auth.php:194 inc/auth.php:339
+msgid "Go to Dashboard"
+msgstr ""
+
+#: functions.php:353 functions.php:362 functions.php:498 functions.php:902
+#: functions.php:919
+msgid "Home"
+msgstr ""
+
+#: inc/auth.php:803
+msgid "If you prefer to create pages manually, use these shortcodes:"
+msgstr ""
+
+#: inc/friendships.php:979
+msgid "Invalid action type."
+msgstr ""
+
+#: inc/messaging.php:1395
+msgid "Invalid activity data."
+msgstr ""
+
+#: inc/messaging.php:1034 inc/messaging.php:1222 inc/messaging.php:1314
+msgid "Invalid conversation."
+msgstr ""
+
+#: inc/messaging.php:985 inc/messaging.php:1176
+msgid "Invalid message data."
+msgstr ""
+
+#: inc/auth.php:920 inc/auth.php:972
+msgid "Invalid page type."
+msgstr ""
+
+#: inc/friendships.php:939
+msgid "Invalid user ID."
+msgstr ""
+
+#: inc/dashboard.php:1483
+msgid "Invalid widget ID."
+msgstr ""
+
+#: inc/dashboard.php:1332
+msgid "Invalid widget type."
+msgstr ""
+
+#: functions.php:1003
+msgid "Invoices"
+msgstr ""
+
+#: 404.php:18
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: functions.php:508 functions.php:904 inc/dashboard.php:1050
+msgid "Jobs"
+msgstr ""
+
+#: inc/dashboard.php:344
+msgid "Jobs Applied"
+msgstr ""
+
+#: inc/dashboard.php:339
+msgid "Jobs Posted"
+msgstr ""
+
+#: inc/activity-feed.php:209
+msgid "Last 30 Days"
+msgstr ""
+
+#: inc/activity-feed.php:208
+msgid "Last 7 Days"
+msgstr ""
+
+#: inc/dashboard.php:333
+msgid "Last Login"
+msgstr ""
+
+#: inc/activity-feed.php:210
+msgid "Last Year"
+msgstr ""
+
+#: functions.php:417 functions.php:903 inc/dashboard.php:1062
+msgid "Learn"
+msgstr ""
+
+#. translators: %s: post title
+#: inc/template-tags.php:81
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/customizer.php:70
+msgid "Light"
+msgstr ""
+
+#: inc/activity-feed.php:227
+msgid "Load More"
+msgstr ""
+
+#: inc/dashboard.php:964
+msgid "Load More Activities"
+msgstr ""
+
+#: inc/messaging.php:222 inc/messaging.php:328
+msgid "Load More Messages"
+msgstr ""
+
+#: inc/activity-feed.php:224
+msgid "Loading activities..."
+msgstr ""
+
+#: inc/activity-feed.php:87
+msgid "Loading more activities..."
+msgstr ""
+
+#: inc/dashboard.php:138 inc/messaging.php:223
+msgid "Loading..."
+msgstr ""
+
+#: inc/auth.php:220 inc/auth.php:380
+msgid "Log In"
+msgstr ""
+
+#: header.php:66 inc/auth.php:597 inc/auth.php:745 inc/auth.php:925
+msgid "Login"
+msgstr ""
+
+#: inc/auth.php:806
+msgid "Login form with optional registration link"
+msgstr ""
+
+#: inc/activity-feed.php:200
+msgid "Logins"
+msgstr ""
+
+#: functions.php:404 functions.php:555
+msgid "Logout"
+msgstr ""
+
+#: inc/auth.php:612 inc/auth.php:748 inc/auth.php:940
+msgid "Lost Password"
+msgstr ""
+
+#: inc/auth.php:226
+msgid "Lost your password?"
+msgstr ""
+
+#: inc/auth.php:802
+msgid "Manual Setup"
+msgstr ""
+
+#: functions.php:438 inc/dashboard.php:1068
+msgid "Mentorship"
+msgstr ""
+
+#: inc/messaging.php:1003 inc/messaging.php:1194
+msgid "Message sent successfully!"
+msgstr ""
+
+#: inc/messaging.php:219
+msgid "Message sent!"
+msgstr ""
+
+#: inc/messaging.php:359
+msgid "Message:"
+msgstr ""
+
+#: inc/activity-feed.php:196 inc/auth.php:637 inc/auth.php:752 inc/auth.php:960
+#: inc/dashboard.php:552 inc/dashboard.php:1428 inc/messaging.php:84
+#: inc/messaging.php:282 inc/messaging.php:539 inc/messaging.php:650
+#: inc/messaging.php:653
+msgid "Messages"
+msgstr ""
+
+#: inc/messaging.php:172
+msgid "Messages page has been fixed! Please refresh the page."
+msgstr ""
+
+#: inc/dashboard.php:948
+msgid "Module:"
+msgstr ""
+
+#: header.php:119
+msgid "More menu"
+msgstr ""
+
+#: inc/friendships.php:775
+msgid "Mutual Friend"
+msgid_plural "Mutual Friends"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:461
+msgid "My Dashboard"
+msgstr ""
+
+#: inc/friendships.php:134 inc/friendships.php:699
+msgid "My Friends"
+msgstr ""
+
+#: inc/dashboard.php:721 inc/dashboard.php:1431 inc/dashboard.php:1619
+msgid "My Job Applications"
+msgstr ""
+
+#: functions.php:426
+msgid "My Learning"
+msgstr ""
+
+#: inc/dashboard.php:712 inc/dashboard.php:1430 inc/dashboard.php:1566
+msgid "My Posted Jobs"
+msgstr ""
+
+#: inc/dashboard.php:544
+msgid "My Profile"
+msgstr ""
+
+#: functions.php:995
+msgid "My Wallet"
+msgstr ""
+
+#: inc/template-functions.php:93
+msgid "Name"
+msgstr ""
+
+#: inc/dashboard.php:470
+msgid "Never"
+msgstr ""
+
+#: inc/messaging.php:224 inc/messaging.php:285 inc/messaging.php:349
+#: inc/messaging.php:561
+msgid "New Message"
+msgstr ""
+
+#: inc/dashboard.php:318 inc/dashboard.php:616
+msgid "New Messages"
+msgstr ""
+
+#: inc/dashboard.php:675
+msgid "New friend request"
+msgid_plural "New friend requests"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/template-functions.php:75
+msgid "Next"
+msgstr ""
+
+#: inc/messaging.php:446
+msgid "No conversations yet."
+msgstr ""
+
+#: inc/friendships.php:823
+msgid "No friend suggestions available."
+msgstr ""
+
+#: inc/friendships.php:693
+msgid "No friends found."
+msgstr ""
+
+#: inc/messaging.php:461 inc/messaging.php:489
+msgid "No messages"
+msgstr ""
+
+#: inc/messaging.php:221
+msgid "No messages yet."
+msgstr ""
+
+#: inc/messaging.php:1055
+msgid "No messages yet. Start the conversation!"
+msgstr ""
+
+#: inc/activity-feed.php:88
+msgid "No more activities found."
+msgstr ""
+
+#: inc/friendships.php:881
+msgid "No pending friend requests."
+msgstr ""
+
+#: inc/dashboard.php:139 inc/dashboard.php:968
+msgid "No recent activity found."
+msgstr ""
+
+#: inc/messaging.php:628
+msgid "No recent conversations."
+msgstr ""
+
+#: inc/messaging.php:553
+msgid "No unread messages."
+msgstr ""
+
+#: inc/messaging.php:1143
+msgid "No users found."
+msgstr ""
+
+#: inc/dashboard.php:1264
+msgid "No widget positions provided."
+msgstr ""
+
+#: inc/auth.php:777
+msgid "Not Created"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: inc/dashboard.php:323 inc/dashboard.php:1429
+msgid "Notifications"
+msgstr ""
+
+#: inc/dashboard.php:1065
+msgid "Online courses and learning"
+msgstr ""
+
+#: 404.php:14
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: inc/auth.php:757
+msgid "Page"
+msgstr ""
+
+#: inc/auth.php:741
+msgid "Page Status"
+msgstr ""
+
+#: inc/auth.php:1041
+msgid "Page status checked. Refreshing..."
+msgstr ""
+
+#: template-parts/content.php:53
+msgid "Pages:"
+msgstr ""
+
+#: inc/auth.php:205 inc/auth.php:355
+msgid "Password"
+msgstr ""
+
+#: inc/auth.php:424
+msgid "Password must be at least 8 characters long."
+msgstr ""
+
+#: inc/auth.php:358
+msgid "Password should be at least 8 characters long."
+msgstr ""
+
+#: inc/template-functions.php:151
+msgid "Password:"
+msgstr ""
+
+#: inc/auth.php:419
+msgid "Passwords do not match."
+msgstr ""
+
+#: inc/friendships.php:829
+msgid "People You May Know"
+msgstr ""
+
+#: inc/customizer.php:118
+msgid "Pill"
+msgstr ""
+
+#: inc/messaging.php:1113
+msgid "Please enter a search term."
+msgstr ""
+
+#: inc/activity-feed.php:181
+msgid "Please log in to view the activity feed."
+msgstr ""
+
+#: functions.php:453
+msgid "Post a Job"
+msgstr ""
+
+#: inc/dashboard.php:1583
+msgid "Post a New Job"
+msgstr ""
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:64
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#. translators: %s: post date.
+#: inc/template-tags.php:30
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-functions.php:74
+msgid "Previous"
+msgstr ""
+
+#: functions.php:44 functions.php:383 functions.php:534
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:368 functions.php:518
+msgid "Privacy Policy"
+msgstr ""
+
+#: inc/friendships.php:87
+msgid "Processing..."
+msgstr ""
+
+#: functions.php:394 functions.php:545 inc/auth.php:617 inc/auth.php:749
+#: inc/auth.php:945
+msgid "Profile"
+msgstr ""
+
+#: inc/dashboard.php:305 inc/dashboard.php:603
+msgid "Profile Complete"
+msgstr ""
+
+#: zeko-profile-template.php:30
+msgid "Profile Not Found"
+msgstr ""
+
+#: inc/activity-feed.php:197
+msgid "Profile Updates"
+msgstr ""
+
+#: functions.php:513 inc/dashboard.php:1056
+msgid "Q&A"
+msgstr ""
+
+#: functions.php:480
+msgid "Questions"
+msgstr ""
+
+#: inc/activity-feed.php:194
+msgid "Questions Asked"
+msgstr ""
+
+#: inc/dashboard.php:262
+msgid "Quick Access"
+msgstr ""
+
+#: inc/dashboard.php:703 inc/dashboard.php:1189 inc/dashboard.php:1424
+msgid "Quick Links"
+msgstr ""
+
+#: inc/messaging.php:945
+msgid "Read"
+msgstr ""
+
+#: inc/template-functions.php:64 page-templates/blog-grid.php:63
+#: page-templates/blog-list.php:63
+msgid "Read More"
+msgstr ""
+
+#. translators: 1: Link to WP admin new post page.
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: inc/dashboard.php:248 inc/dashboard.php:328 inc/dashboard.php:621
+#: inc/dashboard.php:1426
+msgid "Recent Activity"
+msgstr ""
+
+#: inc/dashboard.php:786
+msgid "Recent Interactions"
+msgstr ""
+
+#: inc/messaging.php:991 inc/messaging.php:1182
+msgid "Recipient not found."
+msgstr ""
+
+#: inc/auth.php:791
+msgid "Recreate All Pages"
+msgstr ""
+
+#: inc/class-zeko-multi-checkbox-control.php:229
+msgid "Redirect URL"
+msgstr ""
+
+#: header.php:68 inc/auth.php:235 inc/auth.php:373 inc/auth.php:602
+#: inc/auth.php:746 inc/auth.php:930
+msgid "Register"
+msgstr ""
+
+#: inc/auth.php:807
+msgid "Registration form with optional login link"
+msgstr ""
+
+#: inc/auth.php:464
+msgid ""
+"Registration successful, but automatic login failed. Please log in manually."
+msgstr ""
+
+#: inc/activity-feed.php:201
+msgid "Registrations"
+msgstr ""
+
+#: inc/friendships.php:909
+msgid "Reject"
+msgstr ""
+
+#: inc/friendships.php:195
+msgid "Reject Request"
+msgstr ""
+
+#: inc/auth.php:212
+msgid "Remember Me"
+msgstr ""
+
+#: inc/dashboard.php:507 inc/dashboard.php:1390
+msgid "Remove"
+msgstr ""
+
+#: inc/friendships.php:199
+msgid "Remove Friend"
+msgstr ""
+
+#: inc/customizer.php:137
+msgid ""
+"Replacement text for the footer credit line. Leave empty to hide it entirely."
+msgstr ""
+
+#: inc/friendships.php:88 inc/friendships.php:188
+msgid "Request Sent"
+msgstr ""
+
+#: inc/dashboard.php:197
+msgid "Reset Layout"
+msgstr ""
+
+#: zeko-profile-template.php:32
+msgid "Return Home"
+msgstr ""
+
+#: inc/customizer.php:116
+msgid "Rounded"
+msgstr ""
+
+#: inc/dashboard.php:134
+msgid "Saving..."
+msgstr ""
+
+#: inc/activity-feed.php:215
+msgid "Search"
+msgstr ""
+
+#: inc/template-functions.php:133
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: inc/template-functions.php:131
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#. translators: %s: search query.
+#: search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/activity-feed.php:214
+msgid "Search activities..."
+msgstr ""
+
+#: inc/template-functions.php:130
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: inc/messaging.php:291
+msgid "Search messages"
+msgstr ""
+
+#: inc/messaging.php:225 inc/messaging.php:292
+msgid "Search messages..."
+msgstr ""
+
+#: inc/messaging.php:355
+msgid "Search users..."
+msgstr ""
+
+#: inc/messaging.php:306
+msgid "Select a conversation"
+msgstr ""
+
+#: inc/messaging.php:338
+msgid "Send"
+msgstr ""
+
+#: inc/messaging.php:365
+msgid "Send Message"
+msgstr ""
+
+#: inc/messaging.php:218
+msgid "Sending..."
+msgstr ""
+
+#: functions.php:399 functions.php:550 inc/auth.php:627 inc/auth.php:750
+#: inc/auth.php:950
+msgid "Settings"
+msgstr ""
+
+#: inc/dashboard.php:1080
+msgid "Shop"
+msgstr ""
+
+#: inc/auth.php:757
+msgid "Shortcode"
+msgstr ""
+
+#: functions.php:111
+msgid "Sidebar"
+msgstr ""
+
+#: header.php:27
+msgid "Skip to content"
+msgstr ""
+
+#: inc/dashboard.php:739
+msgid "Social Connections"
+msgstr ""
+
+#: inc/dashboard.php:751
+msgid "Social features not available."
+msgstr ""
+
+#: search.php:36 template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: inc/customizer.php:117
+msgid "Square"
+msgstr ""
+
+#: inc/messaging.php:447
+msgid "Start a new conversation to connect with others!"
+msgstr ""
+
+#: inc/dashboard.php:1196 inc/dashboard.php:1425
+msgid "Statistics"
+msgstr ""
+
+#: inc/auth.php:757
+msgid "Status"
+msgstr ""
+
+#: functions.php:999
+msgid "Subscriptions"
+msgstr ""
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:71
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: functions.php:434
+msgid "Teach on Zeko"
+msgstr ""
+
+#: functions.php:373 functions.php:523
+msgid "Terms"
+msgstr ""
+
+#: zeko-profile-template.php:31
+msgid "The user profile you are looking for does not exist."
+msgstr ""
+
+#: inc/template-functions.php:149
+msgid ""
+"This content is password protected. To view it please enter your password "
+"below:"
+msgstr ""
+
+#: inc/messaging.php:354
+msgid "To:"
+msgstr ""
+
+#: inc/activity-feed.php:207
+msgid "Today"
+msgstr ""
+
+#: header.php:98
+msgid "Toggle navigation menu"
+msgstr ""
+
+#: header.php:50
+msgid "Toggle search"
+msgstr ""
+
+#: header.php:56
+msgid "Toggle shopping cart"
+msgstr ""
+
+#: functions.php:488
+msgid "Topics"
+msgstr ""
+
+#: inc/messaging.php:333
+msgid "Type your message"
+msgstr ""
+
+#: inc/messaging.php:333
+msgid "Type your message..."
+msgstr ""
+
+#: inc/class-zeko-multi-checkbox-control.php:233
+msgid "URL to redirect non-admin users to (e.g., /dashboard/)"
+msgstr ""
+
+#: inc/dashboard.php:937 inc/dashboard.php:1020 inc/messaging.php:484
+#: inc/messaging.php:921
+msgid "Unknown"
+msgstr ""
+
+#. translators: %s: page title
+#: inc/auth.php:990
+#, php-format
+msgid "Updated existing %s page."
+msgstr ""
+
+#: inc/dashboard.php:188
+msgid "User"
+msgstr ""
+
+#: inc/messaging.php:1334
+msgid "User not found."
+msgstr ""
+
+#: inc/auth.php:345
+msgid "Username"
+msgstr ""
+
+#: inc/auth.php:409
+msgid "Username already exists. Please choose another one."
+msgstr ""
+
+#: inc/auth.php:200
+msgid "Username or Email"
+msgstr ""
+
+#: inc/auth.php:774
+msgid "View"
+msgstr ""
+
+#: inc/dashboard.php:647 inc/messaging.php:541
+msgid "View All"
+msgstr ""
+
+#: inc/dashboard.php:959
+msgid "View All Activities"
+msgstr ""
+
+#: inc/dashboard.php:1633
+msgid "View All My Applications"
+msgstr ""
+
+#: inc/dashboard.php:1580
+msgid "View All My Jobs"
+msgstr ""
+
+#: inc/template-functions.php:103
+msgid "Website"
+msgstr ""
+
+#: inc/dashboard.php:1423
+msgid "Welcome"
+msgstr ""
+
+#: inc/dashboard.php:186
+msgid "Welcome to Your Dashboard"
+msgstr ""
+
+#: inc/dashboard.php:694 inc/dashboard.php:1182
+msgid "Welcome to Zeko"
+msgstr ""
+
+#: inc/dashboard.php:527
+msgid ""
+"Welcome to your Zeko dashboard! This is your personal hub where you can "
+"manage your profile, connect with friends, and access all the amazing "
+"features of the Zeko ecosystem."
+msgstr ""
+
+#: inc/dashboard.php:1402
+msgid "Widget added successfully!"
+msgstr ""
+
+#: inc/dashboard.php:1503
+msgid "Widget removed successfully!"
+msgstr ""
+
+#: functions.php:444
+msgid "Work"
+msgstr ""
+
+#: inc/messaging.php:360
+msgid "Write your message..."
+msgstr ""
+
+#: inc/auth.php:192 inc/auth.php:337
+msgid "You are already logged in."
+msgstr ""
+
+#: inc/friendships.php:281
+msgid "You cannot send a friend request to yourself."
+msgstr ""
+
+#: inc/auth.php:914 inc/auth.php:1022 inc/auth.php:1037 inc/messaging.php:164
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: inc/messaging.php:272
+msgid "You do not have permission to view these messages."
+msgstr ""
+
+#: inc/messaging.php:1040 inc/messaging.php:1228 inc/messaging.php:1326
+msgid "You do not have permission to view this conversation."
+msgstr ""
+
+#: inc/dashboard.php:177
+msgid "You do not have permission to view this dashboard."
+msgstr ""
+
+#: inc/dashboard.php:669
+msgid "You haven't added any friends yet."
+msgstr ""
+
+#: inc/dashboard.php:1635
+msgid "You haven't applied for any jobs yet."
+msgstr ""
+
+#: inc/dashboard.php:820
+msgid "You haven't connected with anyone yet."
+msgstr ""
+
+#: inc/dashboard.php:1582
+msgid "You haven't posted any jobs yet."
+msgstr ""
+
+#: inc/friendships.php:874
+msgid "You must be logged in to view friend requests."
+msgstr ""
+
+#: inc/dashboard.php:169
+msgid "You must be logged in to view your dashboard."
+msgstr ""
+
+#: inc/friendships.php:677
+msgid "You must be logged in to view your friends."
+msgstr ""
+
+#: inc/messaging.php:265
+msgid "You must be logged in to view your messages."
+msgstr ""
+
+#: inc/dashboard.php:1257 inc/dashboard.php:1324 inc/dashboard.php:1476
+#: inc/dashboard.php:1517 inc/friendships.php:931 inc/messaging.php:977
+#: inc/messaging.php:1025 inc/messaging.php:1106 inc/messaging.php:1168
+#: inc/messaging.php:1214 inc/messaging.php:1307 inc/messaging.php:1361
+#: inc/messaging.php:1385 inc/messaging.php:1420
+msgid "You must be logged in."
+msgstr ""
+
+#: inc/dashboard.php:645 inc/dashboard.php:730
+msgid "Your Friends"
+msgstr ""
+
+#: inc/auth.php:738
+msgid "Zeko Essential Pages"
+msgstr ""
+
+#: inc/auth.php:90
+msgid "Zeko Member"
+msgstr ""
+
+#: inc/auth.php:723 inc/auth.php:724
+msgid "Zeko Pages"
+msgstr ""
+
+#: inc/customizer.php:39
+msgid "Zeko Theme Options"
+msgstr ""
+
+#. translators: %s: post author.
+#: inc/template-tags.php:45
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/dashboard.php:997
+msgid "created a post"
+msgstr ""
+
+#: inc/friendships.php:701
+msgid "friends"
+msgstr ""
+
+#: inc/dashboard.php:993
+msgid "joined Zeko"
+msgstr ""
+
+#: inc/dashboard.php:1024 inc/messaging.php:514
+msgid "just now"
+msgstr ""
+
+#: inc/dashboard.php:999
+msgid "liked something"
+msgstr ""
+
+#: inc/dashboard.php:994
+msgid "logged in"
+msgstr ""
+
+#: inc/dashboard.php:995
+msgid "made a new friend"
+msgstr ""
+
+#: inc/dashboard.php:807
+msgid "mutual"
+msgid_plural "mutuals"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/friendships.php:579 inc/friendships.php:600 inc/friendships.php:723
+#: inc/friendships.php:849
+msgid "mutual friend"
+msgid_plural "mutual friends"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/dashboard.php:998
+msgid "posted a comment"
+msgstr ""
+
+#: inc/dashboard.php:996
+msgid "sent a message"
+msgstr ""
+
+#: inc/messaging.php:549
+msgid "unread message"
+msgid_plural "unread messages"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/dashboard.php:991
+msgid "updated their avatar"
+msgstr ""
+
+#: inc/dashboard.php:992
+msgid "updated their cover photo"
+msgstr ""
+
+#: inc/dashboard.php:990
+msgid "updated their profile"
+msgstr ""
+
+#: inc/friendships.php:588
+msgid "⏳ Friend Request Sent"
+msgstr ""
+
+#: inc/friendships.php:576
+msgid "✓ Friend"
+msgstr ""
+
+#: inc/friendships.php:592
+msgid "📩 Friend Request Received"
+msgstr ""
+

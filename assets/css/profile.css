@@ -1,0 +1,1486 @@
+/* ===== Profile Builder Styles - Enhanced Card-Based Design ===== */
+
+/* Profile Editor Container - Card Layout */
+.zeko-profile-editor {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 20px var(--shadow-sm);
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Profile Cover - Enhanced */
+.zeko-profile-cover {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px var(--shadow-md);
+}
+
+.zeko-cover-container {
+    width: 100%;
+    height: 100%;
+}
+
+.zeko-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.zeko-cover-actions {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Profile Header - Card Layout */
+.zeko-profile-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    align-items: flex-start;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px var(--shadow-sm);
+    margin-bottom: 20px;
+}
+
+.zeko-profile-avatar {
+    flex: 0 0 150px;
+    position: relative;
+    margin-top: -75px;
+}
+
+.zeko-avatar-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f5f5f5;
+}
+
+.zeko-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.zeko-avatar-actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.zeko-avatar-container:hover .zeko-avatar-actions {
+    transform: translateY(0);
+}
+
+.zeko-profile-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.zeko-profile-name {
+    font-size: 28px;
+    margin: 0 0 5px 0;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.zeko-profile-username {
+    color: var(--color-text-secondary);
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.zeko-profile-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Profile Tabs - Enhanced */
+.zeko-profile-tabs {
+    display: flex;
+    border-bottom: 2px solid var(--color-border);
+    background: var(--color-bg);
+    padding: 0 20px;
+    border-radius: 8px 8px 0 0;
+    overflow-x: auto;
+}
+
+.zeko-tab-btn {
+    padding: 15px 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    white-space: nowrap;
+}
+
+.zeko-tab-btn:hover {
+    color: var(--color-primary);
+    background: rgba(52, 152, 219, 0.05);
+}
+
+.zeko-tab-btn.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+    font-weight: 600;
+    background: white;
+}
+
+.zeko-profile-content {
+    padding: 20px;
+    background: white;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 12px var(--shadow-sm);
+}
+
+.zeko-tab-content {
+    display: none;
+}
+
+.zeko-tab-content.active {
+    display: block;
+    animation: zeko-fade-in 0.3s ease;
+}
+
+/* Card-based layout for profile features */
+.zeko-profile-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px var(--shadow-sm);
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.zeko-profile-card:hover {
+    box-shadow: 0 4px 20px var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.zeko-profile-card h3,
+.zeko-profile-card h4 {
+    color: var(--color-text);
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+/* Repeater Card Specific Styles */
+.zeko-repeater-card {
+    padding: 20px 24px; /* Slightly less padding for repeater cards */
+}
+
+.zeko-repeater-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.zeko-repeater-header h4 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--color-text);
+}
+
+.zeko-repeater-items {
+    margin-bottom: 20px;
+}
+
+.zeko-repeater-item {
+    background-color: #fcfcfc;
+    border: 1px solid #e9e9e9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    transition: all 0.2s ease;
+}
+
+.zeko-repeater-item:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.1);
+}
+
+.zeko-repeater-item h5 {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    color: var(--color-text);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.zeko-repeater-item .at-org,
+.zeko-repeater-item .organization {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.zeko-repeater-item .duration {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    display: block;
+    margin-top: 5px;
+}
+
+.zeko-repeater-item .desc {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.zeko-repeater-item .cert-link {
+    font-size: 13px;
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-top: 8px;
+    display: inline-block;
+}
+
+.zeko-repeater-item .cert-link:hover {
+    text-decoration: underline;
+    color: var(--color-primary-hover);
+}
+
+.btn-remove-repeater-item {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: var(--color-danger);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-remove-repeater-item:hover {
+    opacity: 1;
+    background-color: var(--color-danger-hover);
+}
+
+.zeko-empty-repeater-msg {
+    text-align: center;
+    color: var(--color-text-muted);
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    border: 1px dashed #ddd;
+}
+
+.zeko-repeater-edit-form {
+    background-color: #f0f8ff;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.zeko-form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.zeko-form-row .zeko-form-group {
+    flex: 1;
+    margin-bottom: 0; /* Override default form-group margin */
+}
+
+.zeko-form-group label {
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.zeko-repeater-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.zeko-add-repeater-item-btn,
+.zeko-cancel-repeater-item-btn,
+.zeko-save-repeater-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    margin-right: 10px; /* Spacing between buttons */
+}
+
+.zeko-trigger-repeater-form-btn {
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.zeko-trigger-repeater-form-btn:hover {
+    background-color: #e0f0fa;
+}
+
+
+/* Public Professional Sections */
+.public-professional-sections {
+    margin-top: 30px;
+}
+
+/* Timeline for Experience and Education */
+.professional-timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid var(--color-border);
+    margin-left: 20px; /* Offset to align with other cards */
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-badge {
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    position: absolute;
+    left: -37px; /* Align with border-left */
+    top: 5px;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.timeline-badge.edu {
+    background-color: var(--color-success);
+    box-shadow: 0 0 0 2px var(--color-success);
+}
+
+.card-timeline {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border: 1px solid var(--color-border-light);
+    transition: all 0.2s ease;
+}
+
+.card-timeline:hover {
+    box-shadow: 0 4px 15px var(--shadow-sm);
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+}
+
+.timeline-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0 0 8px 0;
+}
+
+.timeline-org {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.timeline-date {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.timeline-desc {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* Certifications Grid */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.cert-card-item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px var(--shadow-sm);
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.cert-card-item:hover {
+    box-shadow: 0 4px 20px var(--shadow-lg);
+    transform: translateY(-2px);
+    border-color: var(--color-success);
+}
+
+.cert-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.cert-info {
+    flex-grow: 1;
+}
+
+.cert-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0 0 5px 0;
+}
+
+.cert-org {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.cert-date {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    display: block;
+}
+
+.cert-credential-link {
+    font-size: 13px;
+    color: var(--color-success);
+    text-decoration: none;
+    margin-top: 8px;
+    display: inline-block;
+}
+
+.cert-credential-link:hover {
+    text-decoration: underline;
+    color: var(--color-success-hover);
+}
+
+/* Editable Fields - Enhanced */
+.zeko-editable-field {
+    margin-bottom: 20px;
+}
+
+.zeko-field-display {
+    min-height: 60px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-primary);
+    transition: all 0.2s ease;
+}
+
+.zeko-field-display:hover {
+    background-color: #f0f8ff;
+    border-left-color: var(--color-primary-hover);
+}
+
+.zeko-empty-field {
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+.zeko-edit-field-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.zeko-edit-field-btn:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.zeko-field-edit {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f0f8ff;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+}
+
+.zeko-field-edit.active {
+    display: block;
+}
+
+.zeko-field-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.zeko-field-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.zeko-field-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.zeko-save-field-btn {
+    padding: 8px 15px;
+    background-color: var(--color-success);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.zeko-save-field-btn:hover {
+    background-color: var(--color-success-hover);
+}
+
+.zeko-cancel-field-btn {
+    padding: 8px 15px;
+    background-color: var(--color-danger);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.zeko-cancel-field-btn:hover {
+    background-color: var(--color-danger-hover);
+}
+
+/* Details Grid - Card Layout */
+.zeko-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.zeko-detail-item {
+    margin-bottom: 15px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.zeko-detail-item:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+    transform: translateY(-2px);
+}
+
+.zeko-detail-item strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Social Grid - Enhanced */
+.zeko-social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.zeko-social-item {
+    text-align: center;
+}
+
+.zeko-add-social-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.zeko-add-social-btn:hover {
+    background-color: #e9e9e9;
+    border-color: var(--color-primary);
+}
+
+.zeko-add-social-btn .dashicons {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+}
+
+.zeko-social-edit {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.zeko-social-edit .dashicons {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Settings Form - Enhanced */
+.zeko-settings-form {
+    max-width: 500px;
+}
+
+.zeko-form-group {
+    margin-bottom: 20px;
+}
+
+.zeko-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.zeko-form-group select,
+.zeko-form-group input[type="text"],
+.zeko-form-group input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.zeko-form-group select:focus,
+.zeko-form-group input[type="text"]:focus,
+.zeko-form-group input[type="url"]:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.zeko-save-settings-btn {
+    padding: 12px 24px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.zeko-save-settings-btn:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* Profile Completion Progress Bar - Card Layout */
+.zeko-profile-completion {
+    margin-top: 20px;
+}
+
+.zeko-profile-completion-bar {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 12px var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.zeko-profile-completion-bar:hover {
+    box-shadow: 0 4px 20px var(--shadow-lg);
+}
+
+.zeko-completion-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.zeko-completion-percentage {
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.zeko-completion-progress {
+    height: 8px;
+    background-color: var(--color-border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.zeko-progress-bar {
+    height: 100%;
+    background-color: var(--color-success);
+    transition: width 0.5s ease;
+    border-radius: 4px;
+}
+
+.zeko-completion-message {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-bg);
+    border-radius: 6px;
+}
+
+.zeko-completion-message.success {
+    color: var(--color-success);
+    font-weight: 600;
+    background-color: #d4edda;
+}
+
+/* Recent Interactions - Card Layout */
+.zeko-recent-interactions {
+    margin-top: 24px;
+}
+
+.zeko-interaction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.zeko-interaction-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.zeko-interaction-item:hover {
+    box-shadow: 0 4px 12px var(--shadow-md);
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+}
+
+.zeko-interaction-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px var(--shadow-md);
+}
+
+.zeko-interaction-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.zeko-interaction-name {
+    font-weight: 600;
+    color: var(--color-primary);
+    display: block;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.zeko-interaction-mutual {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-top: 4px;
+}
+
+/* No Connections State - Card Layout */
+.zeko-no-connections {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--color-bg);
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 1px solid var(--color-border);
+}
+
+.zeko-no-connections p {
+    color: var(--color-text-secondary);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.zeko-no-connections .btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.zeko-no-connections .btn:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* Social Connections Widget - Card Layout */
+.zeko-social-connections-widget {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px var(--shadow-sm);
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.zeko-social-connections-widget:hover {
+    box-shadow: 0 4px 20px var(--shadow-lg);
+}
+
+.zeko-connection-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.zeko-stat-value {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-primary);
+    display: block;
+}
+
+.zeko-connection-stat-label {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.zeko-recent-interactions h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: var(--color-text);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Friends Widget - Card Layout */
+.zeko-friends-widget {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px var(--shadow-sm);
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.zeko-friends-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.zeko-friends-header h4 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 18px;
+}
+
+.zeko-view-all {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.zeko-view-all:hover {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+}
+
+.zeko-friends-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.zeko-friend-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.zeko-friend-item:hover {
+    transform: scale(1.05);
+}
+
+.zeko-friend-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px var(--shadow-md);
+    transition: box-shadow 0.2s ease;
+}
+
+.zeko-friend-item:hover img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.zeko-friend-requests-notice {
+    padding: 12px;
+    background-color: #d4edda;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #c3e6cb;
+}
+
+.zeko-request-count {
+    background-color: var(--color-success);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+/* Friend Requests Widget - Card Layout */
+.zeko-friend-requests-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px var(--shadow-sm);
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.zeko-friend-requests-container h3 {
+    margin-top: 0;
+    color: var(--color-text);
+    font-size: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.zeko-friend-requests {
+    margin-top: 16px;
+}
+
+.zeko-request-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.zeko-request-item:hover {
+    box-shadow: 0 4px 12px var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.zeko-request-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px var(--shadow-md);
+}
+
+.zeko-request-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.zeko-request-name {
+    font-weight: 600;
+    color: var(--color-primary);
+    display: block;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.zeko-request-username {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    margin-top: 4px;
+}
+
+.zeko-request-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.zeko-request-actions button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.zeko-accept-friend-btn {
+    background-color: var(--color-success);
+    color: white;
+    border: none;
+}
+
+.zeko-accept-friend-btn:hover {
+    background-color: var(--color-success-hover);
+}
+
+.zeko-reject-friend-btn {
+    background-color: var(--color-danger);
+    color: white;
+    border: none;
+}
+
+.zeko-reject-friend-btn:hover {
+    background-color: var(--color-danger-hover);
+}
+
+/* Profile Details Grid - Card Layout (FIXED) */
+.zeko-profile-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.zeko-profile-detail-item {
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.zeko-profile-detail-item:hover {
+    box-shadow: 0 4px 20px var(--shadow-lg);
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+}
+
+.zeko-profile-detail-item strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.zeko-profile-detail-item p {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.zeko-profile-detail-item p a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.zeko-profile-detail-item p a:hover {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+}
+
+/* Profile Stats - Card Layout (FIXED) */
+.zeko-profile-stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.zeko-stat-item {
+    text-align: center;
+    padding: 25px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.zeko-stat-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-primary);
+}
+
+.zeko-stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.zeko-stat-label {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+/* Profile Social Section - Card Layout (FIXED) */
+.zeko-profile-social {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px var(--shadow-sm);
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.zeko-profile-social:hover {
+    box-shadow: 0 4px 20px var(--shadow-lg);
+}
+
+.zeko-profile-social h3 {
+    font-size: 20px;
+    margin: 0 0 20px 0;
+    color: var(--color-text);
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.zeko-profile-social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.zeko-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 24px;
+    border: none;
+}
+
+.zeko-social-link:hover {
+    background: linear-gradient(135deg, var(--color-primary-hover) 0%, #1f618d 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+}
+
+/* Profile Sections - Card Layout (FIXED) */
+.zeko-profile-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px var(--shadow-sm);
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.zeko-profile-section:hover {
+    box-shadow: 0 4px 20px var(--shadow-lg);
+}
+
+.zeko-profile-section h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: var(--color-text);
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 12px;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .zeko-profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .zeko-profile-info {
+        margin-top: 20px;
+    }
+
+    .zeko-profile-actions {
+        justify-content: center;
+    }
+
+    .zeko-profile-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .zeko-profile-stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .zeko-stat-item {
+        padding: 20px 15px;
+    }
+
+    .zeko-stat-number {
+        font-size: 26px;
+    }
+
+    .zeko-profile-social-links {
+        gap: 15px;
+    }
+
+    .zeko-social-link {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    .zeko-profile-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .zeko-tab-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .zeko-profile-name {
+        font-size: 24px;
+    }
+
+    .zeko-tab-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .zeko-profile-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .zeko-profile-stats-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .zeko-stat-item {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .zeko-stat-number {
+        font-size: 22px;
+    }
+
+    .zeko-stat-label {
+        font-size: 12px;
+    }
+
+    .zeko-profile-social-links {
+        gap: 12px;
+    }
+
+    .zeko-social-link {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* Utility Classes */
+.zeko-mt-20 {
+    margin-top: 20px;
+}
+
+.zeko-mb-20 {
+    margin-bottom: 20px;
+}
+
+.zeko-pt-10 {
+    padding-top: 10px;
+}
+
+.zeko-pb-10 {
+    padding-bottom: 10px;
+}
+
+/* Profile Page Layout */
+body.single-profile .site-content {
+    padding-top: 0;
+    background-color: var(--color-bg);
+}
+
+body.single-profile .zeko-profile-editor {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 20px var(--shadow-sm);
+    margin-top: 30px;
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    body.single-profile .zeko-profile-editor {
+        padding: 20px;
+    }
+}
+
+/* Upload Loading State */
+.zeko-profile-editor.zeko-uploading {
+    position: relative;
+    pointer-events: none;
+}
+
+.zeko-profile-editor.zeko-uploading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-lg);
+    z-index: 10;
+}
+
+/* Accessibility: Reduced Motion for Profile */
+@media (prefers-reduced-motion: reduce) {
+    .zeko-profile-card:hover,
+    .zeko-detail-item:hover,
+    .zeko-repeater-item:hover,
+    .zeko-interaction-item:hover,
+    .zeko-stat-item:hover,
+    .zeko-friend-item:hover {
+        transform: none;
+    }
+
+    .zeko-profile-card,
+    .zeko-detail-item,
+    .zeko-repeater-item,
+    .zeko-interaction-item {
+        transition: none;
+    }
+}

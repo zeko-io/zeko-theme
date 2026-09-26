@@ -1,0 +1,229 @@
+/*
+Theme Name: Zeko
+Description: RTL stylesheet for the Zeko theme.
+*/
+
+/* ===== RTL Overrides ===== */
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Navigation */
+.main-navigation ul {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.main-navigation ul ul {
+    left: auto;
+    right: 0;
+}
+
+/* Top Bar */
+.top-bar-menu {
+    gap: 4px;
+}
+
+.top-bar-right {
+    gap: 6px;
+}
+
+/* Mini Cart panel */
+.zeko-header-mini-cart .zeko-mini-cart-panel {
+    right: auto;
+    left: 0;
+}
+
+/* Header badge */
+.zeko-header-rewards-btn,
+.zeko-header-dating-btn {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Search toggle */
+.header-search-toggle {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Search panel */
+.header-search-panel .search-form {
+    direction: rtl;
+}
+
+/* Breadcrumb */
+.zeko-breadcrumb {
+    flex-direction: row-reverse;
+}
+
+/* Dashboard grid */
+.zeko-dashboard-grid {
+    direction: rtl;
+}
+
+.zeko-dashboard-sidebar {
+    border-right: none;
+    border-left: 1px solid var(--color-border);
+}
+
+/* Job cards */
+.zeko-job-card {
+    direction: rtl;
+}
+
+/* Application cards */
+.zeko-application-card {
+    direction: rtl;
+}
+
+/* Modal close button */
+.zeko-preview-close {
+    right: auto;
+    left: 10px;
+}
+
+/* Form fields */
+.zeko-form .zeko-field label {
+    text-align: right;
+}
+
+/* Tables */
+table {
+    direction: rtl;
+}
+
+th {
+    text-align: right;
+}
+
+/* Lists */
+ul, ol {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* Activity feed */
+.zeko-activity-feed-container {
+    direction: rtl;
+}
+
+/* Messages */
+.zeko-message-bubble-sent {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.zeko-message-bubble-received {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Buttons */
+.btn {
+    text-align: center;
+}
+
+/* Sidebar navigation */
+.zeko-nav-link {
+    padding-left: 0;
+    padding-right: 12px;
+}
+
+.zeko-nav-link::before {
+    left: auto;
+    right: 0;
+}
+
+/* Badges */
+.zeko-badge {
+    margin-right: 0;
+    margin-left: 6px;
+}
+
+/* Alignment utilities */
+.text-left {
+    text-align: right;
+}
+
+.text-right {
+    text-align: left;
+}
+
+.ml-auto {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.mr-auto {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.float-left {
+    float: right;
+}
+
+.float-right {
+    float: left;
+}
+
+/* Pricing / wallet */
+.zeko-wallet-balance,
+.zeko-pricing-card {
+    direction: rtl;
+}
+
+/* Profile */
+.zeko-profile-header {
+    direction: rtl;
+}
+
+.zeko-avatar-wrapper {
+    margin-right: 0;
+    margin-left: 16px;
+}
+
+/* Dark mode toggle */
+.zeko-theme-toggle {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+/* Mentor cards */
+.zeko-mentor-card {
+    direction: rtl;
+}
+
+/* Freelance */
+.zeko-freelance-card,
+.zeko-project-card {
+    direction: rtl;
+}
+
+/* Shop */
+.zeko-shop-product-card {
+    direction: rtl;
+}
+
+/* Rewards */
+.zr-leaderboard-row {
+    direction: rtl;
+}
+
+/* QA */
+.zeko-question-card {
+    direction: rtl;
+}
+
+/* Learn */
+.zeko-lesson-nav,
+.zeko-course-card {
+    direction: rtl;
+}
+
+/* Love */
+.zeko-love-card {
+    direction: rtl;
+}

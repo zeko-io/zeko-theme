@@ -1,0 +1,293 @@
+/*
+ * Friendship System Styles
+ */
+
+.zeko-friendship-actions {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.zeko-friend-list-container {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px var(--shadow-sm);
+}
+
+.zeko-friend-list-container h3 {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--color-border-light);
+    padding-bottom: 10px;
+}
+
+.zeko-friend-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.zeko-friend-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.zeko-friend-item:last-child {
+    border-bottom: none;
+}
+
+.zeko-friend-avatar {
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.zeko-friend-avatar img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+}
+
+.zeko-friend-info {
+    flex-grow: 1;
+}
+
+.zeko-friend-name {
+    display: block;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.zeko-friend-name:hover {
+    text-decoration: underline;
+}
+
+.zeko-friend-username {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+}
+
+.zeko-friend-actions {
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+/* Friend Requests */
+.zeko-friend-requests-container {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px var(--shadow-sm);
+}
+
+.zeko-friend-requests-container h3 {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--color-border-light);
+    padding-bottom: 10px;
+}
+
+.zeko-friend-requests {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.zeko-request-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.zeko-request-item:last-child {
+    border-bottom: none;
+}
+
+.zeko-request-avatar {
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.zeko-request-avatar img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+}
+
+.zeko-request-info {
+    flex-grow: 1;
+}
+
+.zeko-request-name {
+    display: block;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.zeko-request-name:hover {
+    text-decoration: underline;
+}
+
+.zeko-request-username {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+}
+
+.zeko-request-actions {
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+.zeko-request-actions button {
+    margin-left: 5px;
+}
+
+/* Friendship buttons */
+.zeko-add-friend-btn,
+.zeko-accept-friend-btn,
+.zeko-reject-friend-btn,
+.zeko-remove-friend-btn {
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.zeko-add-friend-btn {
+    background-color: var(--color-primary);
+    color: var(--color-bg-white);
+    border: none;
+}
+
+.zeko-add-friend-btn:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.zeko-accept-friend-btn {
+    background-color: var(--color-success);
+    color: var(--color-bg-white);
+    border: none;
+}
+
+.zeko-accept-friend-btn:hover {
+    background-color: var(--color-success-hover);
+}
+
+.zeko-reject-friend-btn {
+    background-color: var(--color-bg-white);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-text-secondary);
+}
+
+.zeko-reject-friend-btn:hover {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.zeko-remove-friend-btn {
+    background-color: var(--color-bg-white);
+    color: var(--color-danger);
+    border: 1px solid var(--color-danger);
+}
+
+.zeko-remove-friend-btn:hover {
+    background-color: var(--color-danger-light);
+    color: var(--color-danger-hover);
+}
+
+/* Success and error messages */
+.zeko-success-message,
+.zeko-error-message {
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    font-weight: 500;
+    animation: zeko-fade-in 0.3s ease;
+}
+
+.zeko-success-message {
+    background-color: var(--color-success-light);
+    color: var(--color-success-hover);
+    border: 1px solid var(--color-success-light);
+}
+
+.zeko-error-message {
+    background-color: var(--color-danger-light);
+    color: var(--color-danger-hover);
+    border: 1px solid var(--color-danger-light);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .zeko-friend-item,
+    .zeko-request-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .zeko-friend-actions,
+    .zeko-request-actions {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .zeko-friend-actions button,
+    .zeko-request-actions button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+/* Loading State for Buttons */
+.zeko-loading {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+}
+
+.zeko-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: zeko-spin 0.6s linear infinite;
+}
+
+/* Accessibility: Reduced Motion for Friendships */
+@media (prefers-reduced-motion: reduce) {
+    .zeko-loading::after {
+        animation: none;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-top-color: transparent;
+    }
+}

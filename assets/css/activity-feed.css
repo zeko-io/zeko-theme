@@ -1,0 +1,227 @@
+/*
+ * Activity Feed Styles
+ */
+
+.zeko-activity-feed-container {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px var(--shadow-sm);
+}
+
+.zeko-activity-feed-container h3 {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--color-border-light);
+    padding-bottom: 10px;
+}
+
+.zeko-activity-feed {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.zeko-activity-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.zeko-activity-item:last-child {
+    border-bottom: none;
+}
+
+.zeko-activity-avatar {
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.zeko-activity-avatar img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+}
+
+.zeko-activity-content {
+    flex-grow: 1;
+}
+
+.zeko-activity-content p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+}
+
+.zeko-activity-content p strong {
+    color: var(--color-text);
+}
+
+.zeko-activity-content p a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.zeko-activity-content p a:hover {
+    text-decoration: underline;
+}
+
+.zeko-activity-date {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 5px;
+}
+
+.zeko-loading-activities,
+.zeko-no-activities-found,
+.zeko-error-loading-activities {
+    text-align: center;
+    color: var(--color-text-muted);
+    padding: 20px 0;
+    font-style: italic;
+}
+
+.zeko-load-more-activities {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    padding: 10px 25px;
+    background-color: var(--color-primary);
+    color: var(--color-bg-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.zeko-load-more-activities:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.zeko-load-more-activities:disabled {
+    background-color: var(--color-bg-muted);
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .zeko-activity-feed-container {
+        padding: 15px;
+    }
+
+    .zeko-activity-item {
+        flex-direction: column;
+    }
+
+    .zeko-activity-avatar {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .zeko-load-more-activities {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Loading Skeleton */
+.zeko-activity-skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.zeko-skeleton-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.zeko-skeleton-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-circle);
+    background: linear-gradient(90deg, var(--color-bg-muted) 25%, var(--color-bg-light) 50%, var(--color-bg-muted) 75%);
+    background-size: 200% 100%;
+    animation: zeko-shimmer 1.5s infinite;
+    flex-shrink: 0;
+}
+
+.zeko-skeleton-text {
+    flex: 1;
+}
+
+.zeko-skeleton-line {
+    height: 12px;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(90deg, var(--color-bg-muted) 25%, var(--color-bg-light) 50%, var(--color-bg-muted) 75%);
+    background-size: 200% 100%;
+    animation: zeko-shimmer 1.5s infinite;
+    margin-bottom: 8px;
+}
+
+.zeko-skeleton-line:last-child {
+    width: 60%;
+    margin-bottom: 0;
+}
+
+@keyframes zeko-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Empty State */
+.zeko-no-activities {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--color-text-muted);
+    font-style: normal;
+}
+
+.zeko-no-activities .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 15px;
+    color: var(--color-border);
+}
+
+.zeko-no-activities p {
+    margin: 0;
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .zeko-activity-feed-container {
+        padding: 15px;
+    }
+
+    .zeko-activity-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .zeko-activity-avatar {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .zeko-load-more-activities {
+        width: 100%;
+        padding: 12px;
+    }
+}

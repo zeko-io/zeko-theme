@@ -1,5 +1,5 @@
-.DS_Store
-Thumbs.db
-*.log
-wordpress/
-*.sqlite
+# Generated from .distignore - release zip, GitHub repo and dist build share this set.
+.distignore
+*.map
+zeko.min-parts.txt
+.githooks/

@@ -158,6 +158,9 @@ function zeko_scripts() {
 		}
 	}
 
+	// Dashicons for dashboard/messaging/notification glyphs.
+	wp_enqueue_style( 'dashicons' );
+
 	// Load JavaScript.
 	if ( $suffix && file_exists( $theme_dir . '/assets/js/zeko.min.js' ) ) {
 		wp_enqueue_script( 'zeko-navigation', get_template_directory_uri() . '/assets/js/zeko.min.js', array( 'jquery' ), filemtime( $theme_dir . '/assets/js/zeko.min.js' ), true );

@@ -7,24 +7,27 @@
 
 get_header(); ?>
 
-<main id="primary" class="site-main">
-	<div class="container">
-		<?php
-		while ( have_posts() ) :
-			the_post();
+<div class="container">
+	<div class="zeko-blog-layout">
+		<main id="primary" class="site-main">
+			<?php
+			while ( have_posts() ) :
+				the_post();
 
-			get_template_part( 'template-parts/content', 'single' );
+				get_template_part( 'template-parts/content', 'single' );
 
-			the_post_navigation();
+				the_post_navigation();
 
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-		endwhile;
-		?>
-	</div>
-</main><!-- #main -->
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+			endwhile;
+			?>
+		</main><!-- #main -->
+
+		<?php get_sidebar(); ?>
+	</div><!-- .zeko-blog-layout -->
+</div>
 
 <?php
-get_sidebar();
 get_footer();

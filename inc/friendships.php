@@ -475,7 +475,7 @@ function zeko_get_friends( $user_id ) {
 
 	$friend_ids = array();
 	foreach ( $friends as $friendship ) {
-		if ( $friendship->initiator_id === $user_id ) {
+		if ( (int) $friendship->initiator_id === $user_id ) {
 			$friend_ids[] = $friendship->friend_id;
 		} else {
 			$friend_ids[] = $friendship->initiator_id;

@@ -412,14 +412,14 @@ function zeko_get_conversations_list( $user_id ) {
 		<?php foreach ( $conversations as $conversation ) : ?>
 			<?php
 			// Determine the other user in the conversation.
-			$other_user_id = ( $conversation->user1_id === $user_id ) ? $conversation->user2_id : $conversation->user1_id;
+			$other_user_id = ( (int) $conversation->user1_id === $user_id ) ? $conversation->user2_id : $conversation->user1_id;
 			$other_user    = get_userdata( $other_user_id );
 			if ( ! $other_user ) {
 				continue;
 			}
 
 			// Get unread count for current user.
-			$unread_count = ( $conversation->user1_id === $user_id ) ? $conversation->unread_count_user1 : $conversation->unread_count_user2;
+			$unread_count = ( (int) $conversation->user1_id === $user_id ) ? $conversation->unread_count_user1 : $conversation->unread_count_user2;
 			?>
 			<div class="zeko-conversation-item" data-conversation-id="<?php echo esc_attr( $conversation->conversation_id ); ?>">
 				<div class="zeko-conversation-avatar">
@@ -602,12 +602,12 @@ function zeko_get_recent_conversations( $user_id, $limit = 3 ) {
 		<?php if ( ! empty( $conversations ) ) : ?>
 			<?php foreach ( $conversations as $conversation ) : ?>
 				<?php
-				$other_user_id = ( $conversation->user1_id === $user_id ) ? $conversation->user2_id : $conversation->user1_id;
+				$other_user_id = ( (int) $conversation->user1_id === $user_id ) ? $conversation->user2_id : $conversation->user1_id;
 				$other_user    = get_userdata( $other_user_id );
 				if ( ! $other_user ) {
 					continue;
 				}
-				$unread_count = ( $conversation->user1_id === $user_id ) ? $conversation->unread_count_user1 : $conversation->unread_count_user2;
+				$unread_count = ( (int) $conversation->user1_id === $user_id ) ? $conversation->unread_count_user1 : $conversation->unread_count_user2;
 				?>
 				<div class="zeko-recent-conversation">
 					<div class="zeko-conversation-avatar">
@@ -872,7 +872,7 @@ function zeko_get_messages( $conversation_id, $user_id, $limit = 20, $offset = 0
 		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.SlowDBQuery
 
 		if ( $conversation ) {
-			$unread_field = ( $conversation->user1_id === $user_id ) ? 'unread_count_user1' : 'unread_count_user2';
+			$unread_field = ( (int) $conversation->user1_id === $user_id ) ? 'unread_count_user1' : 'unread_count_user2';
 			$wpdb->update(
 				$conversation_table,
 				array( $unread_field => 0 ),
@@ -919,7 +919,7 @@ function zeko_get_message_data( $message_id ) {
 function zeko_get_message_html( $message, $current_user_id ) {
 	$sender          = get_userdata( $message->sender_id );
 	$sender_name     = $sender ? $sender->display_name : __( 'Unknown', 'zeko' );
-	$is_current_user = ( $message->sender_id === $current_user_id );
+	$is_current_user = ( (int) $message->sender_id === $current_user_id );
 
 	ob_start();
 	?>
@@ -1036,7 +1036,7 @@ function zeko_ajax_get_messages() {
 
 	// Verify user has access to this conversation.
 	$conversation = zeko_get_conversation_data( $conversation_id );
-	if ( ! $conversation || ( $conversation->user1_id !== $user_id && $conversation->user2_id !== $user_id ) ) {
+	if ( ! $conversation || ( (int) $conversation->user1_id !== $user_id && (int) $conversation->user2_id !== $user_id ) ) {
 		wp_send_json_error( array( 'message' => __( 'You do not have permission to view this conversation.', 'zeko' ) ) );
 	}
 
@@ -1224,7 +1224,7 @@ function zeko_ajax_check_new_messages() {
 
 	// Verify user has access to this conversation.
 	$conversation = zeko_get_conversation_data( $conversation_id );
-	if ( ! $conversation || ( $conversation->user1_id !== $user_id && $conversation->user2_id !== $user_id ) ) {
+	if ( ! $conversation || ( (int) $conversation->user1_id !== $user_id && (int) $conversation->user2_id !== $user_id ) ) {
 		wp_send_json_error( array( 'message' => __( 'You do not have permission to view this conversation.', 'zeko' ) ) );
 	}
 
@@ -1259,7 +1259,7 @@ function zeko_ajax_check_new_messages() {
 		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.SlowDBQuery
 
 		// Update unread count.
-		$unread_field       = ( $conversation->user1_id === $user_id ) ? 'unread_count_user1' : 'unread_count_user2';
+		$unread_field       = ( (int) $conversation->user1_id === $user_id ) ? 'unread_count_user1' : 'unread_count_user2';
 		$conversation_table = $wpdb->prefix . 'zeko_conversations';
 		$wpdb->update(
 			$conversation_table,
@@ -1322,12 +1322,12 @@ function zeko_ajax_get_conversation_data() {
 	}
 
 	// Verify user has access to this conversation.
-	if ( $conversation->user1_id !== $user_id && $conversation->user2_id !== $user_id ) {
+	if ( (int) $conversation->user1_id !== $user_id && (int) $conversation->user2_id !== $user_id ) {
 		wp_send_json_error( array( 'message' => __( 'You do not have permission to view this conversation.', 'zeko' ) ) );
 	}
 
 	// Determine the other user.
-	$other_user_id = ( $conversation->user1_id === $user_id ) ? $conversation->user2_id : $conversation->user1_id;
+	$other_user_id = ( (int) $conversation->user1_id === $user_id ) ? $conversation->user2_id : $conversation->user1_id;
 	$other_user    = get_userdata( $other_user_id );
 
 	if ( ! $other_user ) {

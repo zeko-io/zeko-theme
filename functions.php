@@ -329,6 +329,11 @@ require_once get_template_directory() . '/inc/messaging.php';
 require_once get_template_directory() . '/inc/friendships.php';
 
 /**
+ * Load theme notifications (own source for the shared notification bell)
+ */
+require_once get_template_directory() . '/inc/notifications.php';
+
+/**
  * Load admin restriction functionality
  */
 require_once get_template_directory() . '/inc/class-zeko-multi-checkbox-control.php';

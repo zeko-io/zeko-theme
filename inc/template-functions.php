@@ -160,6 +160,10 @@ add_filter( 'the_password_form', 'zeko_password_form' );
 
 /**
  * Footer newsletter subscription handler (admin-post).
+ *
+ * Delegates to Zeko Core's provider layer (self-hosted list, Sendinblue/Brevo
+ * API, etc.) when available; falls back to a plain local option store only if
+ * Zeko Core is inactive.
  */
 function zeko_footer_newsletter_handle() {
 	if ( ! isset( $_POST['zeko_newsletter_nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['zeko_newsletter_nonce'] ) ), 'zeko_newsletter_subscribe' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslashAlreadySanitized
@@ -168,22 +172,33 @@ function zeko_footer_newsletter_handle() {
 	}
 
 	$email = isset( $_POST['zeko_newsletter_email'] ) ? sanitize_email( wp_unslash( $_POST['zeko_newsletter_email'] ) ) : '';
-	if ( is_email( $email ) ) {
-		$subscribers = get_option( 'zeko_newsletter_subscribers', array() );
-		if ( ! is_array( $subscribers ) ) {
-			$subscribers = array();
-		}
-		if ( ! in_array( $email, $subscribers, true ) ) {
-			$subscribers[] = $email;
-			update_option( 'zeko_newsletter_subscribers', $subscribers );
-		}
-		$redirect = wp_get_referer() ? wp_get_referer() : home_url( '/' );
-		wp_safe_redirect( add_query_arg( 'newsletter', 'subscribed', $redirect ) );
+	$base  = wp_get_referer() ? wp_get_referer() : home_url( '/' );
+
+	if ( ! is_email( $email ) ) {
+		wp_safe_redirect( add_query_arg( 'newsletter', 'invalid', $base ) );
 		exit;
 	}
 
-	$redirect = wp_get_referer() ? wp_get_referer() : home_url( '/' );
-	wp_safe_redirect( add_query_arg( 'newsletter', 'invalid', $redirect ) );
+	if ( class_exists( 'Zeko_Core_Newsletter' ) && method_exists( 'Zeko_Core_Newsletter', 'get_instance' ) ) {
+		$result = Zeko_Core_Newsletter::get_instance()->subscribe( $email );
+		if ( is_wp_error( $result ) ) {
+			wp_safe_redirect( add_query_arg( 'newsletter', 'error', $base ) );
+			exit;
+		}
+		wp_safe_redirect( add_query_arg( 'newsletter', 'subscribed', $base ) );
+		exit;
+	}
+
+	// Fallback: local-only storage (no Zeko Core).
+	$subscribers = get_option( 'zeko_newsletter_subscribers', array() );
+	if ( ! is_array( $subscribers ) ) {
+		$subscribers = array();
+	}
+	if ( ! in_array( $email, $subscribers, true ) ) {
+		$subscribers[] = $email;
+		update_option( 'zeko_newsletter_subscribers', $subscribers );
+	}
+	wp_safe_redirect( add_query_arg( 'newsletter', 'subscribed', $base ) );
 	exit;
 }
 add_action( 'admin_post_zeko_newsletter_subscribe', 'zeko_footer_newsletter_handle' );

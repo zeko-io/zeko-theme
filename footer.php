@@ -16,6 +16,7 @@
 			<div class="container">
 				<?php $zeko_email = get_bloginfo( 'admin_email' ); ?>
 				<?php $zeko_newsletter_ok = isset( $_GET['newsletter'] ) && 'subscribed' === sanitize_key( wp_unslash( $_GET['newsletter'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended ?>
+				<?php $zeko_newsletter_err = isset( $_GET['newsletter'] ) && 'error' === sanitize_key( wp_unslash( $_GET['newsletter'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended ?>
 				<div class="footer-widgets">
 					<?php if ( is_active_sidebar( 'footer-widgets' ) ) : ?>
 						<div class="footer-widget-area footer-widget-area--primary">
@@ -27,6 +28,8 @@
 						<h3 class="footer-widgets-title"><?php esc_html_e( 'Stay in the loop', 'zeko' ); ?></h3>
 						<?php if ( $zeko_newsletter_ok ) : ?>
 							<p class="footer-newsletter-done"><?php esc_html_e( 'Thanks for subscribing!', 'zeko' ); ?></p>
+						<?php elseif ( $zeko_newsletter_err ) : ?>
+							<p class="footer-newsletter-done footer-newsletter-error"><?php esc_html_e( 'Could not subscribe at this time. Please try again later.', 'zeko' ); ?></p>
 						<?php else : ?>
 							<form class="footer-newsletter" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
 								<input type="hidden" name="action" value="zeko_newsletter_subscribe" />

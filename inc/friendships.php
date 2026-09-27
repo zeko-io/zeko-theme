@@ -301,6 +301,7 @@ function zeko_send_friend_request( $initiator_id, $friend_id ) {
 
 	if ( $result ) {
 		zeko_log_user_activity( $initiator_id, 'friendship_request_sent', array( 'friend_id' => $friend_id ) );
+		do_action( 'zeko_friendship_sent', (int) $initiator_id, (int) $friend_id );
 		return true;
 	}
 	return new WP_Error( 'db_error', __( 'Failed to send friend request.', 'zeko' ) );
@@ -339,6 +340,7 @@ function zeko_accept_friend_request( $initiator_id, $friend_id ) {
 
 	if ( $result ) {
 		zeko_log_user_activity( $initiator_id, 'friendship_accepted', array( 'friend_id' => $friend_id ) );
+		do_action( 'zeko_friendship_accepted', (int) $initiator_id, (int) $friend_id );
 		return true;
 	}
 	return new WP_Error( 'db_error', __( 'Failed to accept friend request.', 'zeko' ) );

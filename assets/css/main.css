@@ -852,6 +852,22 @@
     max-width: 100%;
 }
 
+/* ===== 404 / Not Found ===== */
+.error-404 .page-title {
+    color: var(--color-text);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.error-404 .search-submit {
+    background: var(--color-primary);
+    color: var(--color-text-on-primary);
+}
+
+[data-theme="dark"] .error-404 .search-submit {
+    background: var(--color-primary);
+    color: var(--color-text-on-primary);
+}
+
 /* ===== Zeko Forms ===== */
 .zeko-form {
     max-width: 500px;
@@ -1168,7 +1184,7 @@
     font-size: 22px;
     width: 22px;
     height: 22px;
-    color: #fff;
+    color: var(--color-text-on-primary);
 }
 .back-to-top:hover {
     transform: scale(1.1);

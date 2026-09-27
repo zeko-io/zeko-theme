@@ -157,3 +157,90 @@ function zeko_password_form( $post = 0 ) {
 	return $output;
 }
 add_filter( 'the_password_form', 'zeko_password_form' );
+
+/**
+ * Footer newsletter subscription handler (admin-post).
+ */
+function zeko_footer_newsletter_handle() {
+	if ( ! isset( $_POST['zeko_newsletter_nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['zeko_newsletter_nonce'] ) ), 'zeko_newsletter_subscribe' ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.MissingUnslashAlreadySanitized
+		wp_safe_redirect( wp_get_referer() ? wp_get_referer() : home_url( '/' ) . '?newsletter=denied' );
+		exit;
+	}
+
+	$email = isset( $_POST['zeko_newsletter_email'] ) ? sanitize_email( wp_unslash( $_POST['zeko_newsletter_email'] ) ) : '';
+	if ( is_email( $email ) ) {
+		$subscribers = get_option( 'zeko_newsletter_subscribers', array() );
+		if ( ! is_array( $subscribers ) ) {
+			$subscribers = array();
+		}
+		if ( ! in_array( $email, $subscribers, true ) ) {
+			$subscribers[] = $email;
+			update_option( 'zeko_newsletter_subscribers', $subscribers );
+		}
+		$redirect = wp_get_referer() ? wp_get_referer() : home_url( '/' );
+		wp_safe_redirect( add_query_arg( 'newsletter', 'subscribed', $redirect ) );
+		exit;
+	}
+
+	$redirect = wp_get_referer() ? wp_get_referer() : home_url( '/' );
+	wp_safe_redirect( add_query_arg( 'newsletter', 'invalid', $redirect ) );
+	exit;
+}
+add_action( 'admin_post_zeko_newsletter_subscribe', 'zeko_footer_newsletter_handle' );
+add_action( 'admin_post_nopriv_zeko_newsletter_subscribe', 'zeko_footer_newsletter_handle' );
+
+/**
+ * Footer social links. Filtered so modules can inject their own.
+ *
+ * @return array<string,string> handle => url.
+ */
+function zeko_footer_social_links() {
+	$social = array(
+		'facebook'  => get_theme_mod( 'zeko_footer_social_facebook', '' ),
+		'twitter'   => get_theme_mod( 'zeko_footer_social_twitter', '' ),
+		'linkedin'  => get_theme_mod( 'zeko_footer_social_linkedin', '' ),
+		'instagram' => get_theme_mod( 'zeko_footer_social_instagram', '' ),
+		'youtube'   => get_theme_mod( 'zeko_footer_social_youtube', '' ),
+	);
+
+	return (array) apply_filters( 'zeko_footer_social_links', array_filter( $social, 'strlen' ) );
+}
+
+/**
+ * Footer social icon markup (inline SVG, branded colors).
+ *
+ * @return string
+ * @param string $handle Social handle (facebook/twitter/etc).
+ */
+function zeko_footer_social_icon( $handle ) {
+	$icons = array(
+		'facebook'  => '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>',
+		'twitter'   => '<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>',
+		'linkedin'  => '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>',
+		'instagram' => '<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>',
+		'youtube'   => '<path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>',
+	);
+
+	if ( ! isset( $icons[ $handle ] ) ) {
+		return '';
+	}
+
+	return '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' . $icons[ $handle ] . '</svg>';
+}
+
+/**
+ * Render the footer social row.
+ */
+function zeko_footer_social_render() {
+	$links = zeko_footer_social_links();
+	if ( empty( $links ) ) {
+		return;
+	}
+	echo '<div class="footer-social">';
+	foreach ( $links as $handle => $url ) {
+		echo '<a class="footer-social__link" href="' . esc_url( $url ) . '" target="_blank" rel="noopener noreferrer" aria-label="' . esc_attr( ucfirst( $handle ) ) . '">';
+		echo zeko_footer_social_icon( $handle ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- inline SVG, static strings.
+		echo '</a>';
+	}
+	echo '</div>';
+}

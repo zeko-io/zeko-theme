@@ -13,16 +13,8 @@ get_header();
 	<div class="zeko-profile-page-container">
 		<?php
 		// Determine which user profile to show.
-		$profile_username = get_query_var( 'zeko_profile_username' );
-		$profile_id       = get_query_var( 'zeko_profile_id' );
-
-		$user = null;
-
-		if ( $profile_username ) {
-			$user = get_user_by( 'login', $profile_username );
-		} elseif ( $profile_id ) {
-			$user = get_userdata( $profile_id );
-		}
+		$profile_user_id = zeko_resolve_profile_user_id( false );
+		$user            = $profile_user_id ? get_userdata( $profile_user_id ) : null;
 
 		if ( ! $user ) {
 			?>

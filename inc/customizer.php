@@ -139,6 +139,40 @@ function zeko_customize_register( $wp_customize ) {
 			'type'        => 'textarea',
 		)
 	);
+
+	// Footer social network links.
+	$wp_customize->add_section(
+		'zeko_footer_social',
+		array(
+			'title'    => __( 'Footer Social Links', 'zeko' ),
+			'panel'    => 'zeko_theme_options',
+			'priority' => 20,
+		)
+	);
+
+	foreach ( array(
+		'facebook'  => __( 'Facebook URL', 'zeko' ),
+		'twitter'   => __( 'X / Twitter URL', 'zeko' ),
+		'linkedin'  => __( 'LinkedIn URL', 'zeko' ),
+		'instagram' => __( 'Instagram URL', 'zeko' ),
+		'youtube'   => __( 'YouTube URL', 'zeko' ),
+	) as $zeko_social_key => $zeko_social_label ) {
+		$wp_customize->add_setting(
+			'zeko_footer_social_' . $zeko_social_key,
+			array(
+				'default'           => '',
+				'sanitize_callback' => 'esc_url_raw',
+			)
+		);
+		$wp_customize->add_control(
+			'zeko_footer_social_' . $zeko_social_key,
+			array(
+				'label'   => $zeko_social_label,
+				'section' => 'zeko_footer_social',
+				'type'    => 'url',
+			)
+		);
+	}
 }
 add_action( 'customize_register', 'zeko_customize_register' );
 

@@ -617,15 +617,86 @@
 .site-footer {
     background: var(--color-text);
     color: var(--color-text-on-primary);
-    padding: 2rem 0;
+    padding: 3rem 0 0;
     margin-top: 2rem;
 }
 
 .footer-widgets {
     margin-bottom: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 2fr 1fr;
     gap: 2rem;
+}
+
+.footer-widget-area--newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-widgets-title {
+    color: var(--color-text-on-primary);
+    font-size: var(--font-size-lg);
+    margin: 0 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-primary);
+    font-weight: 600;
+}
+
+.footer-newsletter {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 360px;
+}
+
+.footer-newsletter input[type="email"] {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--color-text-on-primary);
+    font-size: 13px;
+}
+
+.footer-newsletter input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-newsletter input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.footer-newsletter-done {
+    color: var(--color-success);
+    margin: 0;
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-social__link {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-on-primary);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.footer-social__link:hover {
+    background: var(--color-primary);
+    color: var(--color-text-on-primary);
+    transform: translateY(-2px);
 }
 
 .site-info {
@@ -633,7 +704,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
+    padding: 1rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: var(--font-size-sm);
 }
@@ -650,13 +721,36 @@
     gap: 1rem;
 }
 
-.footer-menu a {
+.footer-menu a, .site-footer a {
     color: #bdc3c7;
     text-decoration: none;
+    transition: color var(--transition-fast);
 }
 
-.footer-menu a:hover {
+.footer-menu a:hover, .site-footer a:hover {
     color: var(--color-text-on-primary);
+}
+
+.site-footer .widget {
+    color: #bdc3c7;
+}
+
+.site-footer .widget a {
+    color: #bdc3c7;
+}
+
+.site-footer .widget-title {
+    color: var(--color-text-on-primary);
+}
+
+.site-footer .widget ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer .widget ul li {
+    margin-bottom: 0.4rem;
 }
 
 /* ===== Widgets ===== */
@@ -670,6 +764,12 @@
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--color-primary);
     color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+    .footer-widgets {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ===== Search Form ===== */
@@ -827,10 +927,65 @@
     text-align: center;
 }
 
+/* ── Account chip (avatar + name) ─────────────────────── */
+.zeko-account-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 8px 2px 2px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-fast);
+    margin-right: 4px;
+}
+
+.zeko-account-chip:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.zeko-account-chip__avatar {
+    width: 22px;
+    height: 22px;
+    line-height: 0;
+}
+
+.zeko-account-chip__avatar img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .zeko-account-chip__name {
+        display: none;
+    }
+}
+
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
     .site-top-bar {
-        display: none;
+        display: block;
+    }
+
+    .site-top-bar .container {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 6px 16px;
+    }
+
+    .top-bar-left {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2px;
     }
 
     .site-main-header .container {
@@ -893,7 +1048,7 @@
     }
 
     .header-search-toggle {
-        display: none;
+        display: flex;
     }
 
     .zeko-nav-gear__panel {

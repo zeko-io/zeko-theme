@@ -34,6 +34,20 @@
 					<nav class="top-bar-left" aria-label="<?php esc_attr_e( 'Account', 'zeko' ); ?>">
 						<?php if ( is_user_logged_in() ) : ?>
 							<?php
+							$zeko_chip_user_id     = get_current_user_id();
+							$zeko_chip_display     = wp_get_current_user()->display_name;
+							$zeko_chip_profile_url = zeko_get_user_profile_url( $zeko_chip_user_id );
+							$zeko_chip_avatar      = zeko_get_user_avatar( $zeko_chip_user_id, 26 );
+							?>
+							<?php
+							/* translators: %1$s: user display name. */
+							$zeko_chip_aria = esc_attr( sprintf( __( 'View %1$s\'s profile', 'zeko' ), $zeko_chip_display ) );
+							?>
+							<a class="zeko-account-chip" href="<?php echo esc_url( $zeko_chip_profile_url ); ?>" aria-label="<?php echo $zeko_chip_aria; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- already escaped above. ?>">
+								<span class="zeko-account-chip__avatar"><?php echo $zeko_chip_avatar; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- get_avatar() output is self-escaped. ?></span>
+								<span class="zeko-account-chip__name"><?php echo esc_html( $zeko_chip_display ); ?></span>
+							</a>
+							<?php
 							wp_nav_menu(
 								array(
 									'theme_location' => 'account',
